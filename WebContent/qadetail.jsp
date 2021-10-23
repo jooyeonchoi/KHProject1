@@ -8,12 +8,35 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Insert title here</title><%@ include file="/WEB-INF/common-head.jsp" %>
+
+<style>
+	h3 {text-align: center;}
+	th {text-align: center;}
+	td {text-align: left;}
+	
+</style>
+
 </head>
 <body>
-	<h1>글 상세보기</h1>
+	<br><br>
+	<ul class="nav nav-tabs">
+	  <li class="nav-item">
+	    <a class="nav-link active" aria-current="page" href="noticeanswer.do?command=list">공지사항</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="faqanswer.do?command=list">FAQ</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="qaanswer.do?command=list">Q&A</a>
+	  </li>
+	</ul>
+
+	<br><br>
+	<h3>글 상세보기</h3>
+	<br><br>
 	
-	<table border="1">
+	<table border="1" align="center"><col width="10"><col width="200">
 		<tr>
 			<th>글 번호</th>
 			<td>${dto.boardno }</td>
@@ -35,11 +58,10 @@
 			<td>${dto.title }</td>
 		</tr>
 		<tr>
-			<th>내용</th>
-			<td><textarea rows="10" cols="60" readonly="readonly">${dto.content }</textarea></td>
+			<td colspan="2"><textarea rows="30" cols="100" readonly="readonly">${dto.content }</textarea></td>
 		</tr>
 		<tr>
-			<td colspan="2">
+			<td colspan="2" style="text-align:right;">
 				<input type="button" value="삭제" onclick="location.href='qaanswer.do?command=delete&boardno=${dto.boardno}'">
 				<input type="button" value="수정" onclick="location.href='qaanswer.do?command=updateform&boardno=${dto.boardno}'">
 				<input type="button" value="목록" onclick="location.href='qaanswer.do?command=list'">
@@ -47,12 +69,6 @@
 			</td>
 		</tr>
 	</table>
-
-
-
-
-
-
 
 
 </body>
