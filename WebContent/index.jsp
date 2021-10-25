@@ -12,6 +12,7 @@
 </head>
 <body>
 	<jsp:forward page="noticeanswer.do?command=list"></jsp:forward>
+	우끼끼 원숭이
 </body>
 </html>
 
