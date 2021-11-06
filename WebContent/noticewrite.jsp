@@ -12,8 +12,8 @@
 
 <%@ include file="/WEB-INF/common-head.jsp" %>
 
+
 <style>
-	h3 {text-align: center;}
 	th {text-align: center;}
 	td {text-align: left;}
 	
@@ -35,19 +35,19 @@
 	</ul>
 
 	<br><br>
-	<h3>공지 작성하기</h3>
-	<br><br>
+	<h3>&emsp;공지 작성하기</h3>
+	<br>
 	
 	<form action="noticeanswer.do" method="post">
 		<input type="hidden" name="command" value="boardwrite">
-		<table border="1" align="center"><col width="10"><col width="200">
+		<table border="1" align="center">
 			<tr>
 				<th>작성자</th>
-				<td><input type="text" name="regId"></td>
+				<td><textarea rows="1" cols="80" name="regId"></textarea></td>
 			</tr>
 			<tr>
 				<th>제목</th>
-				<td><input type="text" name="title"></td>
+				<td><textarea rows="1" cols="80" name="title"></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2"><textarea rows="30" cols="100" name="content"></textarea></td>

@@ -1,6 +1,7 @@
 package com.notice.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -47,6 +48,23 @@ public class NoticeController extends HttpServlet {
 			dis.forward(request, response);
 			
 		}else if(command.equals("writeform")) {
+			
+			//로그인을해주세요
+//			NoticeDao NoticeDao = new NoticeDao();
+//			String regId = null;
+//			if(request.getAttribute("regId") != null){
+//				regId = (String) request.getAttribute("regId");
+//			}
+//			if(regId == null){
+//				PrintWriter script = response.getWriter();
+//				script.println("<script>");
+//				script.println("alert('로그인을 해주세요');");
+//				script.println("location.href = 'login.jsp'");
+//				script.println("</script>");
+//				script.close();
+//				return;
+//			}
+			
 			response.sendRedirect("noticewrite.jsp");
 			
 		}else if(command.equals("boardwrite")) {

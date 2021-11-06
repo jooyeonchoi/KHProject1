@@ -63,7 +63,7 @@
 				<c:forEach items="${list }" var="dto">
 					<tr>
 						<td>${dto.boardno }</td>
-						<td>
+						<td style="text-align:left;">
 							<c:forEach begin="1" end="${dto.titletab }">
 								&nbsp;&nbsp;
 							</c:forEach>

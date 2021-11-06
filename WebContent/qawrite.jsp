@@ -13,7 +13,6 @@
 <%@ include file="/WEB-INF/common-head.jsp" %>
 
 <style>
-	h3 {text-align: center;}
 	th {text-align: center;}
 	td {text-align: left;}
 	
@@ -24,30 +23,30 @@
 	<br><br>
 	<ul class="nav nav-tabs">
 	  <li class="nav-item">
-	    <a class="nav-link active" aria-current="page" href="noticeanswer.do?command=list">공지사항</a>
+	    <a class="nav-link" href="noticeanswer.do?command=list">공지사항</a>
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="faqanswer.do?command=list">FAQ</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" href="qaanswer.do?command=list">Q&A</a>
+	    <a class="nav-link active" aria-current="page" href="qaanswer.do?command=list">Q&A</a>
 	  </li>
 	</ul>
 
 	<br><br>
-	<h3>글 쓰기</h3>
-	<br><br>
+	<h3>&emsp;글 쓰기</h3>
+	<br>
 	
 	<form action="qaanswer.do" method="post">
 		<input type="hidden" name="command" value="boardwrite">
-		<table border="1" align="center"><col width="10"><col width="200">
+		<table border="1" align="center">
 			<tr>
 				<th>작성자</th>
 				<td><input type="text" name="regId"></td>
 			</tr>
 			<tr>
 				<th>제목</th>
-				<td><input type="text" name="title"></td>
+				<td><textarea rows="1" cols="80" name="title"></textarea></td>
 			</tr>
 			<tr>
 				<td colspan="2"><textarea rows="30" cols="100" name="content"></textarea></td>

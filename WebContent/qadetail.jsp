@@ -11,7 +11,6 @@
 <title>Insert title here</title><%@ include file="/WEB-INF/common-head.jsp" %>
 
 <style>
-	h3 {text-align: center;}
 	th {text-align: center;}
 	td {text-align: left;}
 	
@@ -22,23 +21,23 @@
 	<br><br>
 	<ul class="nav nav-tabs">
 	  <li class="nav-item">
-	    <a class="nav-link active" aria-current="page" href="noticeanswer.do?command=list">공지사항</a>
+	    <a class="nav-link" href="noticeanswer.do?command=list">공지사항</a>
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="faqanswer.do?command=list">FAQ</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" href="qaanswer.do?command=list">Q&A</a>
+	    <a class="nav-link active" aria-current="page" href="qaanswer.do?command=list">Q&A</a>
 	  </li>
 	</ul>
 
 	<br><br>
-	<h3>글 상세보기</h3>
-	<br><br>
+	<h3>&emsp;${dto.title }</h3>
+	<br>
 	
 	<table border="1" align="center"><col width="10"><col width="200">
 		<tr>
-			<th>글 번호</th>
+			<th>NO.</th>
 			<td>${dto.boardno }</td>
 		</tr>
 		<tr>

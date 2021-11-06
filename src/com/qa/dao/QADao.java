@@ -1,6 +1,7 @@
 package com.qa.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -137,7 +138,7 @@ public class QADao extends JDBCTemplate{
 		PreparedStatement pstm = null;
 		int res = 0;
 		
-		String sql = " UPDATE QA_BOARD SET TITLE=?, CONTENT=?, MOD_DT=SYSDATE WHERE BOARDNO=? ";
+		String sql = " UPDATE QA_BOARD SET MODDATE=SYSDATE, TITLE=?, CONTENT=? WHERE BOARDNO=? ";
 		
 		try {
 			pstm = con.prepareStatement(sql);

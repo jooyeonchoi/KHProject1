@@ -9,28 +9,52 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+
+<%@ include file="/WEB-INF/common-head.jsp" %>
+
+<style>
+	th {text-align: center;}
+	td {text-align: left;}
+	
+</style>
+
 </head>
 <body>
-	<h1>FAQ 수정하기</h1>
+	<br><br>
+	<ul class="nav nav-tabs">
+	  <li class="nav-item">
+	    <a class="nav-link" href="noticeanswer.do?command=list">공지사항</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link active" aria-current="page" href="faqanswer.do?command=list">FAQ</a>
+	  </li>
+	  <li class="nav-item">
+	    <a class="nav-link" href="qaanswer.do?command=list">Q&A</a>
+	  </li>
+	</ul>
+
+	<br><br>
+	<h3>&emsp;FAQ 수정하기</h3>
+	<br>
 	
-	<form action = "answer.do" method="post">
+	<form action = "faqanswer.do" method="post">
 		<input type="hidden" name="command" value="boardupdate">
 		<input type="hidden" name="faqSeq" value="${dto.faqSeq }">
-		<table border="1">
+		<table border="1" align="center">
 			<tr>
 				<th>작성자</th>
 				<td>${dto.regId }</td>
 			</tr>
 			<tr>
 				<th>질문</th>
-				<td><input type="text" name="title" value="${dto.title }"></td>
+				<td colspan="2"><textarea rows="10" cols="100" name="title">${dto.title }</textarea></td>
 			</tr>
 			<tr>
 				<th>답변</th>
-				<td><textarea rows="10" cols="60" name="content">${dto.content }</textarea></td>
+				<td colspan="2"><textarea rows="10" cols="100" name="content">${dto.content }</textarea></td>
 			</tr>
 			<tr>
-				<td colspan="2">
+				<td colspan="2" style="text-align:right;">
 					<input type="submit" value="수정">
 					<input type="button" value="취소" onclick="location.href='faqanswer.do?command=detail&faqSeq=${dto.faqSeq }'">
 				</td>

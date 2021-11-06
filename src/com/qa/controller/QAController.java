@@ -1,6 +1,7 @@
 package com.qa.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Date;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.faq.dao.FAQDao;
 import com.qa.biz.QABiz;
 import com.qa.dao.QADao;
 import com.qa.dto.QADto;
@@ -43,8 +45,45 @@ public class QAController extends HttpServlet {
 			request.setAttribute("dto", dto);
 			RequestDispatcher dis = request.getRequestDispatcher("qadetail.jsp");
 			dis.forward(request, response);
+
+			//신고하기
+//		}else if(command.equals("report")) {
+//			String regId = request.getParameter("regId");
+//			String title = request.getParameter("title");
+//			String content = request.getParameter("content");
+//			
+//			
+//			QADto dto = new QADto();
+//			dto.setRegId(regId);
+//			dto.setTitle(title);
+//			dto.setContent(content);
+//			
+//			int res = dao.insert(dto);
+//			if(res>0) {
+//				dispatch("qaanswer.do?command=list", request, response);
+//			}else {
+//				dispatch("qaanswer.do?command=reportAction", request, response);
+//			}
+		
 			
 		}else if(command.equals("writeform")) {
+			
+			//로그인을해주세요
+//			QADao QADao = new QADao();
+//			String regId = null;
+//			if(request.getAttribute("regId") != null){
+//				regId = (String) request.getAttribute("regId");
+//			}
+//			if(regId == null){
+//				PrintWriter script = response.getWriter();
+//				script.println("<script>");
+//				script.println("alert('로그인을 해주세요');");
+//				script.println("location.href = 'login.jsp'");
+//				script.println("</script>");
+//				script.close();
+//				return;
+//			}
+			
 			response.sendRedirect("qawrite.jsp");
 			
 		}else if(command.equals("boardwrite")) {

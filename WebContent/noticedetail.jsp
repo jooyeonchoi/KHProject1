@@ -13,7 +13,6 @@
 <%@ include file="/WEB-INF/common-head.jsp" %>
 
 <style>
-	h3 {text-align: center;}
 	th {text-align: center;}
 	td {text-align: left;}
 	
@@ -35,12 +34,12 @@
 	</ul>
 
 	<br><br>
-	<h3>공지 상세보기</h3>
-	<br><br>
+	<h3>&emsp;${dto.title }</h3>
+	<br>
 	
 	<table border="1" align="center"><col width="10"><col width="200">
 		<tr>
-			<th>번호</th>
+			<th>NO.</th>
 			<td>${dto.noticeSeq }</td>
 		</tr>
 		<tr>

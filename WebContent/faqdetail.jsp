@@ -13,7 +13,6 @@
 <%@ include file="/WEB-INF/common-head.jsp" %>
 
 <style>
-	h3 {text-align: center;}
 	th {text-align: center;}
 	td {text-align: left;}
 	
@@ -24,10 +23,10 @@
 	<br><br>
 	<ul class="nav nav-tabs">
 	  <li class="nav-item">
-	    <a class="nav-link active" aria-current="page" href="noticeanswer.do?command=list">공지사항</a>
+	    <a class="nav-link" href="noticeanswer.do?command=list">공지사항</a>
 	  </li>
 	  <li class="nav-item">
-	    <a class="nav-link" href="faqanswer.do?command=list">FAQ</a>
+	    <a class="nav-link active" aria-current="page" href="faqanswer.do?command=list">FAQ</a>
 	  </li>
 	  <li class="nav-item">
 	    <a class="nav-link" href="qaanswer.do?command=list">Q&A</a>
@@ -35,12 +34,12 @@
 	</ul>
 
 	<br><br>
-	<h3>FAQ 상세보기</h3>
-	<br><br>
+	<h3>&emsp;${dto.title }</h3>
+	<br>
 	
 	<table border="1" align="center">
 		<tr>
-			<th>번호</th>
+			<th>NO.</th>
 			<td>${dto.faqSeq }</td>
 		</tr>
 		<tr>
