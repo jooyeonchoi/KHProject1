@@ -27,7 +27,8 @@
 
 </head>
 <body>
-	<br><br>
+
+ 	<br><br>
 	<ul class="nav nav-tabs">
 	  <li class="nav-item">
 	    <a class="nav-link" href="noticeanswer.do?command=list">공지사항</a>
@@ -39,7 +40,7 @@
 	    <a class="nav-link active" aria-current="page" href="qaanswer.do?command=list">Q&A</a>
 	  </li>
 	</ul>
-	
+
 	<br><br>
 	<h3>Q&A</h3>
 	<br><br>
@@ -83,7 +84,7 @@
 			</tr>
 		</table>
 			
-			<nav aria-label="Page navigation example">
+ 			<nav aria-label="Page navigation example">
 			  <ul class="pagination justify-content-center">
 			    <li class="page-item disabled">
 			      <a class="page-link">Previous</a>

@@ -24,7 +24,8 @@
 
 </head>
 <body>
-	<br><br>
+
+ 	<br><br>
 	<ul class="nav nav-tabs">
 	  <li class="nav-item">
 	    <a class="nav-link active" aria-current="page" href="noticeanswer.do?command=list">공지사항</a>
